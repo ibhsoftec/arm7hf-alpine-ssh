@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  ssh-server:
+    container_name: ssh-server
+    image: ibhsoftec/arm7hf-alpine-ssh
+    restart: always
+    command: "init"
+    ports:
+      - "1022:22/tcp"
+    volumes:
+      - /mnt/sdcard:/mnt/sdcard
+
